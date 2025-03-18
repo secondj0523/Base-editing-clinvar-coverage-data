@@ -26,8 +26,8 @@ def highlight_sequence(row):
 
     # 강조 표시 추가 로직
     if original_base == 'C':
-        start_pos = base_position + 8
-        end_pos = base_position + 13
+        start_pos = base_position + 5
+        end_pos = base_position + 10
         for i in range(start_pos, min(end_pos, len(sequence) - 1)):
             if sequence[i:i+2] == "AA":
                 highlighted_sequence = (
@@ -54,8 +54,8 @@ def highlight_sequence(row):
                 )
                 break
 
-        start_pos = base_position - 8
-        end_pos = base_position - 13
+        start_pos = base_position - 5
+        end_pos = base_position - 10
         for i in range(max(end_pos, 0), start_pos):
             if sequence[i:i+2] == "TT":
                 highlighted_sequence = (
